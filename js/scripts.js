@@ -24,20 +24,14 @@ var titleCase = function(string) {
     words.forEach(function(word) {
       if (exceptions.indexOf(word) === -1) {
         word = capitalize(word);
-        console.log("Subsentence: " + subsentence);
-        console.log("Word: " + word);
       }
 
       if (subsentence === true) {
         word = capitalize(word);
         subsentence = false;
-        console.log("Subsentence: " + subsentence);
-        console.log("Word: " + word);
       }
       if (word.match(/[:.;?!]/)) {
         subsentence = true;
-        console.log("Subsentence: " + subsentence);
-        console.log("Word: " + word);
       }
 
       result.push(word);
